@@ -67,26 +67,31 @@
    </head>
 <body>
 <div class="info">
-<h2>script.sikuli</h2> <a href="script.zip">(Download this script)</a>
+<h2>testing.sikuli</h2> <a href="testing.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
-missionRunning = False
-<span class="skw">click</span>(<img src="1462760519675.png" />)
-<span class="skw">click</span>(Pattern(<img src="1462806289444.png" />).similar(<span class="dig">0.74</span>))
+<span class="cmt">#testing script </span>
+<span class="cmt">#finish timeline daily challenge </span>
+<span class="skw">click</span>(<img src="1462809835414.png" />)
+<span class="skw">click</span>(Pattern(<img src="1462809973592.png" />).targetOffset(<span class="dig">6</span>,<span class="dig">189</span>))
+<span class="skw">wait</span>(<img src="1462810042503.png" />)
+<span class="skw">click</span>(<img src="1462810042503.png" />)
+<span class="skw">wait</span>(<img src="1462810083650.png" />)
+<span class="skw">click</span>(<img src="1462810083650.png" />)
 
 
-
-<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">20</span>):
-    <span class="kw">while</span>(<span class="kw">not</span> exists(Pattern(<img src="1462765029872.png" />).similar(<span class="dig">0.80</span>))):
-        <span class="skw">click</span>(<img src="1462760893884.png" />)
-        <span class="kw">while</span>(<span class="kw">not</span> exists(Pattern(<img src="1462763144399.png" />).targetOffset(<span class="dig">1</span>,-<span class="dig">5</span>))):
-            missionRunning = True
-            exists(Pattern(<img src="1462764604011.png" />).targetOffset(-<span class="dig">2</span>,-<span class="dig">2</span>))
-            missionRunning = False
-        <span class="skw">click</span>(Pattern(<img src="1462764604011.png" />).targetOffset(-<span class="dig">2</span>,-<span class="dig">2</span>))
-        <span class="kw">if</span> exists(Pattern(<img src="1462765029872.png" />).similar(<span class="dig">0.80</span>)):
-            <span class="skw">click</span>(Pattern(<img src="1462769658093.png" />).exact())
-    x += <span class="dig">1</span>
+<span class="kw">for</span> x <span class="kw">in</span> range (<span class="dig">0</span>,<span class="dig">5</span>):
+    <span class="kw">while</span>(<span class="kw">not</span> exists(<img src="1462810111265-1.png" />)):
+        exists(<img src="1462810111265-1.png" />)
+    <span class="skw">click</span>(<img src="1462810111265-1.png" />)
+    <span class="kw">while</span> (<span class="kw">not</span> exists(<img src="1462810342528.png" />)):
+        exists(<img src="1462810342528.png" />)
+    <span class="kw">if</span> exists(<img src="1462807610868.png" />):
+        <span class="skw">click</span>(<img src="1462807632587.png" />)
+    <span class="kw">if</span> x == <span class="dig">5</span>:
+        <span class="skw">click</span>(Pattern(<img src="1462810342528.png" />).targetOffset(-<span class="dig">84</span>,<span class="dig">0</span>))
+    <span class="kw">else</span>:
+        <span class="skw">click</span>(Pattern(<img src="1462810342528.png" />).targetOffset(<span class="dig">79</span>,-<span class="dig">5</span>))
 </pre>
 </body>
 </html>

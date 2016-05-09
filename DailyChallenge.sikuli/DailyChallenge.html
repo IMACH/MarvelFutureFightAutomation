@@ -1,0 +1,136 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>DailyChallenge.sikuli</h2> <a href="DailyChallenge.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="cmt">#This is to run the Marvel Daily Challenge</span>
+<span class="cmt"># Goal is to finish all challenges and be rewarded the 25 crystals </span>
+
+<span class="cmt">#start from home screen</span>
+<span class="skw">click</span>(<img src="1462760519675.png" />)
+<span class="skw">click</span>(Pattern(<img src="1462808362672.png" />).similar(<span class="dig">0.76</span>))
+
+
+<span class="cmt">#this loops runs 5 times to complete the missions</span>
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>, <span class="dig">5</span>):
+    <span class="skw">wait</span>(<img src="1462760893884.png" />)
+    <span class="skw">click</span>(<img src="1462760893884.png" />)
+    <span class="kw">while</span>(<span class="kw">not</span> exists(Pattern(<img src="1462763144399.png" />).targetOffset(<span class="dig">1</span>,-<span class="dig">5</span>))):
+        exists(Pattern(<img src="1462764604011.png" />).targetOffset(-<span class="dig">2</span>,-<span class="dig">2</span>))
+
+    <span class="skw">click</span>(Pattern(<img src="1462764604011.png" />).targetOffset(-<span class="dig">2</span>,-<span class="dig">2</span>))
+    <span class="kw">if</span> exists(<img src="1462807610868.png" />):
+        <span class="skw">click</span>(<img src="1462807632587.png" />)
+    <span class="kw">if</span> exists(<img src="1462807769542.png" />):
+        <span class="skw">click</span>(<img src="1462807783700.png" />)
+
+<span class="cmt">#exit mission stage select </span>
+<span class="kw">if</span> exists(<img src="1462808254558.png" />):
+   <span class="skw">click</span>(<img src="1462809102142.png" />)
+   <span class="skw">click</span>(Pattern(<img src="1462808254558.png" />).targetOffset(-<span class="dig">76</span>,-<span class="dig">1</span>))
+<span class="kw">if</span> exists(<img src="1462808310047.png" />):
+    <span class="skw">click</span>(Pattern(<img src="1462808310047.png" />).targetOffset(-<span class="dig">117</span>,<span class="dig">0</span>))
+<span class="cmt">#should now be back at home screen </span>
+<span class="cmt">#Daily Mission Clear x1 </span>
+<span class="skw">click</span>(<img src="1462760519675.png" />)
+<span class="skw">click</span>(<img src="1462808985556.png" />)
+<span class="skw">click</span>(<img src="1462809015305.png" />)
+<span class="skw">click</span>(<img src="1462809122078.png" />)
+<span class="kw">while</span>(<span class="kw">not</span> exists(Pattern(<img src="1462763144399.png" />).targetOffset(<span class="dig">1</span>,-<span class="dig">5</span>))):
+        exists(Pattern(<img src="1462764604011.png" />).targetOffset(-<span class="dig">2</span>,-<span class="dig">2</span>))
+        <span class="skw">click</span>(Pattern(<img src="1462764604011.png" />).targetOffset(-<span class="dig">182</span>,-<span class="dig">5</span>))
+<span class="kw">if</span> exists(<img src="1462807610868.png" />):
+        <span class="skw">click</span>(<img src="1462807632587.png" />)
+
+<span class="cmt">#should be back at home</span>
+<span class="cmt">#finish timeline daily challenge </span>
+<span class="skw">click</span>(<img src="1462809835414-1.png" />)
+<span class="skw">click</span>(Pattern(<img src="1462809973592-1.png" />).targetOffset(<span class="dig">6</span>,<span class="dig">189</span>))
+<span class="skw">wait</span>(<img src="1462810042503-1.png" />)
+<span class="skw">click</span>(<img src="1462810042503-1.png" />)
+<span class="skw">wait</span>(<img src="1462810083650-1.png" />)
+<span class="skw">click</span>(<img src="1462810083650-1.png" />)
+
+
+<span class="kw">for</span> x <span class="kw">in</span> range (<span class="dig">0</span>,<span class="dig">5</span>):
+    <span class="kw">while</span>(<span class="kw">not</span> exists(<img src="1462810111265-1.png" />)):
+        exists(<img src="1462810111265-1.png" />)
+    <span class="skw">click</span>(<img src="1462810111265-1.png" />)
+    <span class="kw">while</span> (<span class="kw">not</span> exists(<img src="1462810342528-1.png" />)):
+        exists(<img src="1462810342528-1.png" />)
+    <span class="kw">if</span> exists(<img src="1462807610868-1.png" />):
+        <span class="skw">click</span>(<img src="1462807632587-1.png" />)
+    <span class="kw">if</span> x == <span class="dig">5</span>:
+        <span class="skw">click</span>(Pattern(<img src="1462810342528-1.png" />).targetOffset(-<span class="dig">84</span>,<span class="dig">0</span>))
+    <span class="kw">else</span>:
+        <span class="skw">click</span>(Pattern(<img src="1462810342528-1.png" />).targetOffset(<span class="dig">79</span>,-<span class="dig">5</span>))
+</pre>
+</body>
+</html>

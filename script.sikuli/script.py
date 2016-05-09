@@ -1,6 +1,7 @@
 missionRunning = False 
 click("1462760519675.png")
-click("1462771079204.png")
+click(Pattern("1462806289444.png").similar(0.74))
+
 
 
 for x in range(20):
