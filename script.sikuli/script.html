@@ -72,16 +72,20 @@
 <pre class="sikuli-code">
 missionRunning = False
 <span class="skw">click</span>(<img src="1462760519675.png" />)
-<span class="skw">click</span>(<img src="1462765514122.png" />)
+<span class="skw">click</span>(<img src="1462771079204.png" />)
 
 
-<span class="kw">while</span>(<span class="kw">not</span> exists(Pattern(<img src="1462765029872.png" />).similar(<span class="dig">0.80</span>))):
-    <span class="skw">click</span>(<img src="1462760893884.png" />)
-    <span class="kw">while</span>(<span class="kw">not</span> exists(Pattern(<img src="1462763144399.png" />).targetOffset(<span class="dig">1</span>,-<span class="dig">5</span>))):
-        missionRunning = True
-        exists(Pattern(<img src="1462764604011.png" />).targetOffset(-<span class="dig">2</span>,-<span class="dig">2</span>))
-        missionRunning = False
-    <span class="skw">click</span>(Pattern(<img src="1462764604011.png" />).targetOffset(-<span class="dig">2</span>,-<span class="dig">2</span>))
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">20</span>):
+    <span class="kw">while</span>(<span class="kw">not</span> exists(Pattern(<img src="1462765029872.png" />).similar(<span class="dig">0.80</span>))):
+        <span class="skw">click</span>(<img src="1462760893884.png" />)
+        <span class="kw">while</span>(<span class="kw">not</span> exists(Pattern(<img src="1462763144399.png" />).targetOffset(<span class="dig">1</span>,-<span class="dig">5</span>))):
+            missionRunning = True
+            exists(Pattern(<img src="1462764604011.png" />).targetOffset(-<span class="dig">2</span>,-<span class="dig">2</span>))
+            missionRunning = False
+        <span class="skw">click</span>(Pattern(<img src="1462764604011.png" />).targetOffset(-<span class="dig">2</span>,-<span class="dig">2</span>))
+        <span class="kw">if</span> exists(Pattern(<img src="1462765029872.png" />).similar(<span class="dig">0.80</span>)):
+            <span class="skw">click</span>(Pattern(<img src="1462769658093.png" />).exact())
+    x += <span class="dig">1</span>
 </pre>
 </body>
 </html>
