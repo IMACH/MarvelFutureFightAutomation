@@ -3,13 +3,15 @@
 
 #start from home screen
 click("1462760519675.png")
-click(Pattern("1462808362672.png").similar(0.76))
+click(Pattern("1462893035991.png").similar(0.79))
+
 
 
 #this loops runs 5 times to complete the missions
 for x in range(0, 5):
-    wait("1462760893884.png")
-    click("1462760893884.png")
+    wait("1462893281759.png")
+    
+    click("1462893281759.png")
     while(not exists(Pattern("1462763144399.png").targetOffset(1,-5))):
         exists(Pattern("1462764604011.png").targetOffset(-2,-2))
                 

@@ -70,8 +70,10 @@
 <h2>testing2.sikuli</h2> <a href="testing2.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
-<span class="kw">if</span> exists(<img src="1462807610868.png" />):
-    <span class="skw">click</span>(<img src="1462807632587.png" />)
+<span class="kw">if</span> exists(Pattern(<img src="1462894818243.png" />).exact()):
+    <span class="skw">click</span>(<img src="1462894818243.png" />)
+hover(Pattern(<img src="1462894896340.png" />).targetOffset(<span class="dig">8</span>,<span class="dig">37</span>))
+<span class="skw">click</span>(Pattern(<img src="1462894896340.png" />).targetOffset(<span class="dig">8</span>,<span class="dig">37</span>))
 </pre>
 </body>
 </html>
